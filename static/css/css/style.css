@@ -1,0 +1,223 @@
+body {
+  min-height: 100vh;
+  font-family: "Montserrat";
+  margin: 0;
+}
+
+h1 {
+  margin-top: 4em;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+header .navbar {
+  position: relative;
+  width: 100%;
+  padding: auto;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgb(237, 237, 243);
+}
+
+header .navbar p {
+  font-size: 20px;
+  padding: 0px 10px;
+}
+
+header .navbar i {
+  z-index: 1;
+  cursor: pointer;
+  font-size: 30px;
+  padding: 0px 30px;
+}
+
+header .navbar i.close {
+  color: white;
+}
+
+.menus {
+  background: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  opacity: 0;
+}
+
+.menus ul {
+  margin-top: 7em;
+}
+
+.menus ul li {
+  margin: 4em 0;
+  opacity: 0;
+}
+
+.menus ul li a {
+  font-size: 30px;
+}
+
+.menus ul li.animated {
+  opacity: 1;
+}
+
+.animated {
+  opacity: 1;
+}
+
+section {
+  height: 100vh;
+  padding-left: 30px;
+  padding-top: 20px;
+  text-align: center;
+}
+
+section:nth-child(even) {
+  color: #000;
+}
+
+section .container {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section .container .image .image1 {
+  width: 80%;
+}
+footer {
+  background: rgb(237, 237, 243);
+  position: sticky;
+  top: 100%;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  width: auto;
+  padding-left: 30px;
+  color: #ababab;
+  border-top: 1px solid #e5e5e5;
+}
+.card-header li {
+  display: flex;
+  width: 100px;
+  float: left;
+  padding: 10px;
+}
+.card-header a {
+  color: #000;
+}
+h1 {
+  margin-top: 0;
+}
+.form-control {
+  display: block;
+  width: 500px;
+  height: calc(1em + 0.5rem + 1.5px);
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #6e707e;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #d1d3e2;
+  border-radius: 0.35rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  margin-top: 10px;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+h2,
+h3 {
+  orphans: 3;
+  widows: 3;
+}
+.container-fluid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.mb-4,
+.my-4 {
+  margin-bottom: 1.5rem !important;
+  float: left;
+}
+.btn {
+  font-family: "Montserrat";
+  color: #fcf7f8;
+  padding: 7px 20px 6px 20px;
+  border: 0;
+  outline: 0;
+  border-radius: 2px;
+  font-weight: 300;
+  font-size: 14px;
+  margin: 0 10px;
+
+  transition: 0.15s ease-in-out all;
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.25);
+
+  background: linear-gradient(to right, #17828a 50%, #16777e 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  float: none;
+  margin-right: 420px;
+}
+
+.btn:hover {
+  cursor: pointer;
+  background-position: left bottom;
+}
+
+.btn:active {
+  background-position: left bottom;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.25);
+}
+.btn:disabled {
+  background: #afafaf;
+  box-shadow: none;
+}
+.section-prediction {
+  height: 120vh;
+}
+
+.img-plot {
+  height: 400px;
+  width: 600px;
+  float: left;
+}
+/*# customize animation delay here */
+
+.mydelay-03 {
+  -webkit-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+}
+
+.mydelay-06 {
+  -webkit-animation-delay: 0.6s;
+  animation-delay: 0.6s;
+}
+
+.mydelay-09 {
+  -webkit-animation-delay: 0.9s;
+  animation-delay: 0.9s;
+}

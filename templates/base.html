@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/css/style.css')}}" type="text/css">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/fontawesome-free/css/all.min.css')}}" type="text/css">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/animate.css/animate.min.css')}}">
+    <!--<title>{% block title %}{% endblock %}</title>-->
+    {% if title %}
+    <title>{{ title }}</title>
+    {% else %}
+    <title>Machine Learning-2020</title>
+    {% endif %}
+</head>
+<body>
+<header>
+    <div class="navbar" id="navbar">
+        <p>Muhammad Assidiq Fattah</p>
+        <i class="fas fa-bars" id="icon-menu"></i>
+    </div>
+</header>
+<div class="menus">
+<ul class="links">
+  <li class="list">
+    <a href="#home" class="active">Home</a>
+  </li>
+  <li class="list">
+    <a href="#model">Model</a>
+  </li>
+  <li class="list">
+    <a href="#prediction">Prediction</a>
+  </li>
+</ul>
+</div>
+<div class="sections">
+<section id="home">
+    <h1>Home</h1>
+  <div class="container">
+    <div class="title">
+      <h1 class="animated infinite bounce delay-0s">Machine Learning</h1>
+      <p>
+        Menentukan jenis kaca menggunakan Multi-layer Perceptron Classifier
+      </p>
+    </div>
+    <div class="image">
+      <img src="{{ url_for('static',filename='images/ai.png')}}" class="image1" />
+    </div>
+  </div>
+</section>
+<section id="model" class="section-prediction">
+  <div class="card-header">
+        <li>
+          <a href="{{ url_for('index') }}"><i class="fas fa-long-arrow-alt-left"></i> Back</a>
+        </li>
+        <h1>Model</h1>
+  </div>
+    <div class="container-fluid">
+        <h2 class="h3 mb-4">Confusion Matric</h2>
+      </div>
+    <input
+          type="text"
+          class="form-control"
+          name="accuracy"
+          value="{{ accuracy }}"
+          placeholder="Accuracy"
+          readonly
+        />
+        <input
+          type="text"
+          class="form-control"
+          name="recall"
+          value="{{ recall }}"
+          placeholder="Recall"
+          readonly
+        />
+        <input
+          type="text"
+          class="form-control"
+          name="precision"
+          value="{{ precision }}"
+          placeholder="Precision"
+          readonly
+        />
+        <input
+          type="text"
+          class="form-control"
+          name="f1"
+          value="{{ f1 }}"
+          placeholder="F-Measure"
+          readonly
+        />
+      <form action = "{{ url_for('index') }}" method = "POST">
+        <button type="submit" class="btn">
+          <span class="btn-text">Process</span>
+        </button>
+      </form>
+      <img src="{{ url }}" alt="Chart" class="img-plot">
+</section>
+<section id="prediction" class="section-prediction">
+    <div class="card-header">
+        <li>
+          <a href="{{ url_for('index') }}"><i class="fas fa-long-arrow-alt-left"></i> Back</a>
+        </li>
+        <h1>Prediction</h1>
+      </div>
+    <div class="container-fluid">
+        <h2 class="h3 mb-4">Prediction</h2>
+      </div>
+      <div>
+        <form action="{{ url_for('result_pred') }}" method="post">
+          <input
+            type="text"
+            class="form-control"
+            name="ri"
+            placeholder="Refractive Index"
+          />
+          <input
+            type="text"
+            class="form-control"
+            name="na"
+            placeholder="Sodium"
+          />
+          <input
+            type="text"
+            class="form-control"
+            name="mg"
+            placeholder="Magnesium"
+          />
+          <input
+            type="text"
+            class="form-control"
+            name="al"
+            placeholder="Aluminium"
+          />
+          <input
+            type="text"
+            class="form-control"
+            name="si"
+            placeholder="Silicon"
+          />
+          <input
+            type="text"
+            class="form-control"
+            name="k"
+            placeholder="Potassium"
+          />
+          <input
+            type="text"
+            class="form-control"
+            name="ca"
+            placeholder="Calcium"
+          />
+          <input
+            type="text"
+            class="form-control"
+            name="ba"
+            placeholder="Barium"
+          />
+          <input
+            type="text"
+            class="form-control"
+            name="fe"
+            placeholder="Iron"
+          />
+          <button type="submit" class="btn btn-pred">
+            <span class="btn-text">Submit</span>
+          </button>
+        </form>
+      </div>
+      <div class="container-fluid">
+        <h2 class="h3 mb-4">Result</h2>
+      </div>
+      <div>
+        <input
+          type="text"
+          class="form-control"
+          name="result"
+          value="{{ result }}"
+          placeholder="Result"
+          readonly
+        />
+      </div>
+</section>
+</div>
+<footer>
+    <p>Copyright &copy;<span class="year"></span> Muhammad Assidiq Fattah</p>
+</footer>
+</body>
+<script src="{{ url_for('static',filename='js/script.js')}}"></script>
+<script>
+    const yearEl = document.querySelector(".year");
+    const date = new Date();
+    const year = date.getFullYear();
+    yearEl.innerText = year;
+ </script>
+</html>
